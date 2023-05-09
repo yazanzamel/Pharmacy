@@ -1,16 +1,60 @@
-# first_app
+import 'package:flutter/material.dart';
 
-A new Flutter project.
+void main() {
 
-## Getting Started
+runApp(const MyApp());
+}
 
-This project is a starting point for a Flutter application.
+class MyApp extends StatelessWidget {
+const MyApp({super.key});
 
-A few resources to get you started if this is your first Flutter project:
+// This widget is the root of your application.
+@override
+Widget build(BuildContext context) {
+return const MaterialApp(
+debugShowCheckedModeBanner: false,
+home: MyHomePage(),
+);
+}
+}
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+class MyHomePage extends StatelessWidget {
+const MyHomePage({super.key});
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+@override
+Widget build(BuildContext context) {
+return Scaffold(
+backgroundColor: Colors.white,
+body: Center(
+child: Image.asset('assets/images/logo_v1.png'),
+),
+);
+}
+}
+
+// class MyApp extends StatefulWidget{
+//
+//   const MyApp({super.key});
+//
+//   @override
+//   State<MyApp> createState() {
+//     return _MyAppState();
+//   }
+// }
+//
+// class _MyAppState extends State<MyApp>{
+//
+//   var activeScreen = 'splash-screen1';
+//   void switchScreen(){
+//     setState((){
+//       activeScreen = 'splash-screen2';
+//     });
+//   }
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     // TODO: implement build
+//     throw UnimplementedError();
+//   }
+//
+// }
